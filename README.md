@@ -3,7 +3,7 @@
 1. In a language and environment of your choice, please build a web service which turns all integers from one to a client-specified number in a JSON array.
 2. Now, please write a simple client which queries the web service and prints every other number from the returned array.
 
-## Detailed Explanation
+## Detailed Task Explanation
 
 #### First Task:
 Create a web service as in the example below:
@@ -62,11 +62,35 @@ To use the virtual environment, you can activate it with:
 $ source env/bin/activate
 ```
 
-### Installation & Migrations
+### Installation
 
 Install the project packages including Django:
 
 ```
 (env) $ pip install -r requirements.txt
 ```
+
+### Run server
+
+Only once, you have to export the FLASK_APP:
+
+```
+export FLASK_APP=app.py
+
+```
+
+With this command, you can run the server:
+
+```
+(venv) $ flask run
+```
+
+### In browser:
+
+Run the local server:
+
+```
+localhost:8000/
+```
+
 
