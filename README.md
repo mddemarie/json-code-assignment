@@ -36,3 +36,37 @@ OUTPUT:
 4
 6
 ```
+
+## SETUP
+
+I assume you already installed Python 3.4 or higher and pip.
+
+### Virtual Environment
+
+Install virtualenv via pip:
+
+```
+$ pip install virtualenv
+```
+
+Create a virtual environment for a project:
+
+```
+$ cd this-project
+$ virtualenv env
+```
+
+To use the virtual environment, you can activate it with:
+
+```
+$ source env/bin/activate
+```
+
+### Installation & Migrations
+
+Install the project packages including Django:
+
+```
+(env) $ pip install -r requirements.txt
+```
+
