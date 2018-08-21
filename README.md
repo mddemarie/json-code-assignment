@@ -90,7 +90,7 @@ With this command, you can run the server:
 Run the local server:
 
 ```
-localhost:8000/
+http://localhost:5000/
 ```
 
 
