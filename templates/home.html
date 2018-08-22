@@ -5,9 +5,20 @@
     </head>
     <body>
         <h3>Enter any positive number:</h3>
-        <form method="POST" action="">
-            {{ form.max_num }}
-            {{ form.submit }}
-        </form>
+        <input type="number" id="user_num">
+        <button type="submit" onclick="getNumbers()">Submit</button>
+        <p id="demo"></p>
+            <script>
+            function getNumbers() {
+                let userInput = document.getElementById("user_num").value;
+                const max_num = Number(userInput) + 1;
+                let listOfNums = []
+                for (i = 1; i < max_num; i++){
+                    listOfNums.push(i)
+                }
+                const result = JSON.stringify(listOfNums)
+                document.getElementById("demo").innerHTML = result;
+            }
+        </script>
     </body>
 </html>
