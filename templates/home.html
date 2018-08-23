@@ -6,19 +6,35 @@
     <body>
         <h3>Enter any positive number:</h3>
         <input type="number" id="user_num">
-        <button type="submit" onclick="getNumbers()">Submit</button>
-        <p id="demo"></p>
-            <script>
-            function getNumbers() {
+        <button type="submit" onclick="getNumsInJson()">Submit</button>
+        <p id="allNumbers"></p>
+        <script>
+            let getNumbers = function (){
                 let userInput = document.getElementById("user_num").value;
                 const max_num = Number(userInput) + 1;
-                let listOfNums = []
+                let listOfNums = [];
                 for (i = 1; i < max_num; i++){
                     listOfNums.push(i)
-                }
-                const result = JSON.stringify(listOfNums)
-                document.getElementById("demo").innerHTML = result;
-            }
+                };
+                return listOfNums;
+            };
+
+            let getNumsInJson = function() {
+                const result = JSON.stringify(getNumbers());
+                document.getElementById("allNumbers").innerHTML = result;
+            };
+        </script>
+        <button type="submit" onclick="getEveryOtherNumber()">Get every other number!</button>
+        <p id="evenNumbers"></p>
+        <script>
+            let checkIfEven = function (num){
+                return num % 2 == 0;
+            };
+
+            let getEveryOtherNumber = function (){
+                const listOfNumbers = getNumbers();
+                document.getElementById("evenNumbers").innerHTML = listOfNumbers.filter(checkIfEven);
+            };
         </script>
     </body>
 </html>
