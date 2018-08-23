@@ -4,4 +4,4 @@ from app import app
 
 @app.route("/")
 def get_input():
-    return render_template('home.html', title='GetNumber')
+    return render_template("home.html")

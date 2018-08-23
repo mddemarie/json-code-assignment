@@ -9,7 +9,7 @@
         <button type="submit" onclick="getNumsInJson()">Submit</button>
         <p id="allNumbers"></p>
         <script>
-            let getNumbers = function (){
+            let getNumbers = function(){
                 let userInput = document.getElementById("user_num").value;
                 const max_num = Number(userInput) + 1;
                 let listOfNums = [];
@@ -19,21 +19,21 @@
                 return listOfNums;
             };
 
-            let getNumsInJson = function() {
+            let getNumsInJson = function(){
                 const result = JSON.stringify(getNumbers());
                 document.getElementById("allNumbers").innerHTML = result;
             };
         </script>
         <button type="submit" onclick="getEveryOtherNumber()">Get every other number!</button>
-        <p id="evenNumbers"></p>
+        <p id="otherNumbers"></p>
         <script>
-            let checkIfEven = function (num){
+            let checkIfEven = function(num){
                 return num % 2 == 0;
             };
 
-            let getEveryOtherNumber = function (){
-                const listOfNumbers = getNumbers();
-                document.getElementById("evenNumbers").innerHTML = listOfNumbers.filter(checkIfEven);
+            let getEveryOtherNumber = function(){
+                const listOfAllNumbers = getNumbers();
+                document.getElementById("otherNumbers").innerHTML = listOfAllNumbers.filter(checkIfEven);
             };
         </script>
     </body>
