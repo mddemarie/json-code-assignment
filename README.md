@@ -91,4 +91,8 @@ Run the local server:
 http://localhost:5000/
 ```
 
+### Suggestions for improvement:
 
+- JavaScript code could be in separate folder
+- 2 tests with different test cases would be useful for each task
+(I will maybe write these in the upcoming hours)
